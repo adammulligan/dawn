@@ -1,0 +1,4 @@
+cookbook_paths:
+- /home/adam/src/ruby/chef/
+recipes:
+- dawn::git
