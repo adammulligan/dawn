@@ -10,7 +10,7 @@ task :install do
   end
 
   puts "Symlinking soloistrc.#{machine}"
-  puts `rm "$PWD/.soloistrc"`
+  puts `rm "$PWD/.soloistrc"` if File.exists?("#{Dir.pwd}/.soloistrc")
   puts `ln -s "$PWD/templates/soloistrc.#{machine}" "$PWD/.soloistrc"`
   puts `rvmsudo soloist`
 end
