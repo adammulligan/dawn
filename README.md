@@ -22,7 +22,13 @@ recipes you wish to use.
 
   mkdir ~/cookbooks
   cd ~/cookbooks
+
+You will need to install the XCode command line tools, so that `git` and
+`make` are available.
+
   git clone https://github.com/adammulligan/dawn
+  git clone https://github.com/opscode-cookbooks/dmg
+  sudo gem install chef
   sudo gem install soloist
 
 Create a new `.soloistrc` file of your design in `/templates` (in the
