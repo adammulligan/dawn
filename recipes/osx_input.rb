@@ -69,18 +69,6 @@ dawn_defaults "Turn off keyboard illumination when computer is not used for 5 mi
   integer 300
 end
 
-dawn_defaults "Set units" do
-  domain 'NSGlobalDomain'
-  key 'AppleLanguages'
-  array "en"
-end
-
-dawn_defaults "" do
-  domain 'NSGlobalDomain'
-  key 'AppleLocale'
-  string "en_GB@currency=GBP"
-end
-
 dawn_defaults "" do
   domain 'NSGlobalDomain'
   key 'AppleMeasurementUnits'

@@ -16,6 +16,12 @@ dawn_defaults "Show indicator lights for open applications" do
   boolean true
 end
 
+dawn_defaults "Position to left" do
+  domain 'com.apple.dock'
+  key 'orientation'
+  string 'left'
+end
+
 dawn_defaults "Don't animate opening applications" do
   domain 'com.apple.dock'
   key 'launchanim'
