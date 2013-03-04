@@ -33,10 +33,3 @@ dawn_defaults "Enable subpixel font rendering" do
   key 'AppleFontSmoothing'
   integer 2
 end
-
-dawn_defaults "Enable HiDPI display modes" do
-  domain '/Library/Preferences/com.apple.windowserver'
-  key 'DisplayResolutionEnabled'
-  boolean true
-end
-
