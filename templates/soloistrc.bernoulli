@@ -1,0 +1,4 @@
+cookbook_paths:
+- /Users/adammulligan/cookbooks
+recipes:
+- dawn::osx_defaults
