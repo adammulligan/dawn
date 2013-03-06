@@ -1,6 +1,10 @@
 if node["platform"] == "mac_os_x"
   links = {
-    "#{WS_HOME}/inbox" => "#{WS_HOME}/Downloads"
+    "#{WS_HOME}/inbox" => "#{WS_HOME}/Downloads",
+    "#{WS_HOME}/inbox/_screenshots" => "#{WS_HOME}/cloud/Google Drive/Sync/_screenshots",
+    "#{WS_HOME}/pics"  => "#{WS_HOME}/Pictures",
+    "#{WS_HOME}/docs"  => "#{WS_HOME}/Documents",
+    "#{WS_HOME}/src"  => "#{WS_HOME}/cloud/Dropbox/src",
   }
 
   links.each do |f, t|
