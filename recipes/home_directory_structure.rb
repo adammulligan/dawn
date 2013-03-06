@@ -1,6 +1,6 @@
 if node["platform"] == "mac_os_x"
   links = {
-    "#{WS_HOME}/Downloads" => "#{WS_HOME}/inbox"
+    "#{WS_HOME}/inbox" => "#{WS_HOME}/Downloads"
   }
 
   links.each do |f, t|
@@ -11,7 +11,7 @@ if node["platform"] == "mac_os_x"
 end
 
 new_directories = [
-  "#{WS_HOME}/bin"
+  "#{WS_HOME}/bin",
   "#{WS_HOME}/tmp"
 ]
 
