@@ -1,5 +1,3 @@
-include_recipe "dawn::git"
-
 ::RBENV_HOME = "#{WS_HOME}/.rbenv"
 ::RBENV_COMMAND = "/usr/local/bin/rbenv"
 
