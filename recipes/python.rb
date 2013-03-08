@@ -20,7 +20,7 @@
 
 include_recipe "dawn::homebrew"
 
-if node["platform"] != "mac_os_x"
+if node["platform"] == "mac_os_x"
   brew "python"
 else
   major_version = node['platform_version'].split('.').first.to_i
