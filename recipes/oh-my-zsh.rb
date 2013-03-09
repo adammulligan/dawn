@@ -9,9 +9,11 @@ end
 %w{aliases functions}.each do |file|
   template "#{node["oh-my-zsh_custom_dir"]}/#{file}.zsh" do
     source "#{file}.zsh"
+    owner WS_USER
   end
 end
 
 template "#{WS_HOME}/.zshrc" do
   source "zshrc"
+  owner WS_USER
 end
