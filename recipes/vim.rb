@@ -4,9 +4,14 @@ git node["vim_home"] do
   repository node["vim_config_git"]
   branch "master"
   revision "HEAD"
-  action :sync
   user WS_USER
-  enable_submodules true
+end
+
+%w{_temp _backup}.each do |dir|
+  directory "#{node["vim_home"]}/#{dir}" do
+    owner WS_USER
+    action :create
+  end
 end
 
 link "#{WS_HOME}/.vimrc" do
