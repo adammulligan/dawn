@@ -9,10 +9,10 @@ git node["vim_home"] do
   enable_submodules true
 end
 
-link "#{WS_HOME}/.#{vimrc}" do
-  to "#{node["vim_home"]}/#{vimrc}"
+link "#{WS_HOME}/.vimrc" do
+  to "#{node["vim_home"]}/vimrc"
   owner WS_USER
-  not_if { File.symlink?("#{node["vim_home"]}/#{vimrc}") }
+  not_if { File.symlink?("#{node["vim_home"]}/vimrc") }
 end
 
 file "#{WS_HOME}/.vimrc.local" do
