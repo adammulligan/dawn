@@ -9,9 +9,9 @@ if node["platform"] != "mac_os_x"
     user WS_USER
   end
 
-  remote_file "#{Chef::Config[:file_cache_path]}/.dropbox-dist" do
-    source "#{Chef::Config[:file_cache_path]}/.dropbox-dist"
-    owner WS_USER
+  execute "copy Dropbox to ~/" do
+   command "mv #{Chef::Config[:file_cache_path]}/.dropbox-dist #{WS_HOME}/.dropbox-dist"
+   owner WS_USER
   end
 else
   dmg_package "Dropbox" do
