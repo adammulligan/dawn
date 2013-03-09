@@ -12,7 +12,8 @@ Linux and OS X, and should:
 Requirements
 ------------
 
-For OS X recipes, you will need the [dmg cookbook](https://github.com/opscode-cookbooks/dmg).
+For OS X recipes, you will need the [dmg cookbook](https://github.com/opscode-cookbooks/dmg) and either XCode or
+the XCode Command Line Tools.
 
 Usage
 -----
