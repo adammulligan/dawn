@@ -21,22 +21,22 @@ Usage
 For best results, use the Soloist gem to select which cookbooks and
 recipes you wish to use.
 
-  mkdir ~/cookbooks
-  cd ~/cookbooks
+    mkdir ~/cookbooks
+    cd ~/cookbooks
 
 You will need to install the XCode command line tools, so that `git` and
 `make` are available.
 
-  git clone https://github.com/adammulligan/dawn
-  git clone https://github.com/opscode-cookbooks/dmg
-  sudo gem install chef
-  sudo gem install soloist
+    git clone https://github.com/adammulligan/dawn
+    git clone https://github.com/opscode-cookbooks/dmg
+    sudo gem install chef
+    sudo gem install soloist
 
 Create a new `.soloistrc` file of your design in `/templates` (in the
 format `soloistrc.machine_name`, or modify an existing template,
 ensuring the your `soloistrc` points to `~/cookbooks`.
 
-  rake install
+    rake install
 
 License and Authors
 -------------------
