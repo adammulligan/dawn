@@ -4,7 +4,7 @@ if node["platform"] != "mac_os_x"
     owner WS_USER
   end
 
-  execute "extract tomcat-connectors" do
+  execute "extract dropbox" do
     command "tar vxzf #{Chef::Config[:file_cache_path]}/dropbox.tar.gz -C #{Chef::Config[:file_cache_path]}/"
     user 'root'
   end
