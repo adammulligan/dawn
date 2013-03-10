@@ -9,12 +9,11 @@ if node["platform"] != "mac_os_x"
 
   execute "untar node" do
     command "tar xvf #{Chef::Config[:file_cache_path]}/node.tar.gz -C #{Chef::Config[:file_cache_path]}/"
-    user WS_USER
-    group "admin"
+    user 'root'
   end
 
   bash "build node" do
-    user WS_USER
+    user 'root'
     cwd "#{Chef::Config[:file_cache_path]}/node-v0.8.22"
     code <<-EOH
       ./configure
