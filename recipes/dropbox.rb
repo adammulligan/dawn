@@ -6,12 +6,12 @@ if node["platform"] != "mac_os_x"
 
   execute "extract tomcat-connectors" do
     command "tar vxzf #{Chef::Config[:file_cache_path]}/dropbox.tar.gz -C #{Chef::Config[:file_cache_path]}/"
-    user WS_USER
+    user 'root'
   end
 
   execute "copy Dropbox to ~/" do
-   command "mv #{Chef::Config[:file_cache_path]}/.dropbox-dist #{WS_HOME}/.dropbox-dist"
-   owner WS_USER
+   command "cp #{Chef::Config[:file_cache_path]}/.dropbox-dist #{WS_HOME}/.dropbox-dist"
+   user WS_USER
   end
 else
   dmg_package "Dropbox" do
