@@ -10,7 +10,7 @@ if node["platform"] != "mac_os_x"
   end
 
   execute "copy Dropbox to ~/" do
-   command "cp #{Chef::Config[:file_cache_path]}/.dropbox-dist #{WS_HOME}/.dropbox-dist"
+   command "cp -R #{Chef::Config[:file_cache_path]}/.dropbox-dist #{WS_HOME}/.dropbox-dist"
    user WS_USER
   end
 else
