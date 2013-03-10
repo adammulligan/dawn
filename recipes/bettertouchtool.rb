@@ -10,7 +10,7 @@ execute "unzip BetterTouchTool to /Applications" do
   group "admin"
 end
 
-template "#{WS_HOME}/Library/Prefrences/com.hegenberg.BetterTouchTool.plist" do
+template "#{WS_HOME}/Library/Preferences/com.hegenberg.BetterTouchTool.plist" do
   source "com.hegenberg.BetterTouchTool.plist"
   owner WS_USER
 end
