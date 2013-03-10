@@ -9,6 +9,6 @@ execute "unzip alfred" do
 end
 
 execute "Install spotify" do
-  command "cp #{Chef::Config[:file_cache_path]}/Alfred.app /Applications"
+  command "cp -R #{Chef::Config[:file_cache_path]}/Alfred.app /Applications"
   user WS_USER
 end
