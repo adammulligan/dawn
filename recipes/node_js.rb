@@ -16,12 +16,12 @@ if node["platform"] != "mac_os_x"
   bash "build node" do
     user WS_USER
     cwd "#{Chef::Config[:file_cache_path]}/node-v0.8.22"
-    code <<=EOH
+    code <<-EOH
       ./configure
       make
       make install
     EOH
   end
 else
-  brew "node"
+  brew_install "node"
 end
