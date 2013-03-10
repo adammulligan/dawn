@@ -4,7 +4,7 @@ remote_file "#{Chef::Config[:file_cache_path]}/imageoptim.tbz2" do
 end
 
 execute "untar imageoptim" do
-  command "tar zxvf #{Chef::Config[:file_cache_path]}/imageoptim.tbz2 -d #{Chef::Config[:file_cache_path]}/"
+  command "tar zxvf #{Chef::Config[:file_cache_path]}/imageoptim.tbz2 -C #{Chef::Config[:file_cache_path]}/"
   user WS_USER
 end
 
