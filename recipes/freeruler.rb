@@ -8,9 +8,3 @@ execute "unzip FreeRuler to /Applications" do
   user WS_USER
   group "admin"
 end
-
-ruby_block "test to see if FreeRuler was installed" do
-  block do
-    raise "FreeRuler install failed" unless File.exists?(node["freeruler_app_path"])
-  end
-end
