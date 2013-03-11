@@ -8,7 +8,7 @@ execute "untar imageoptim" do
   user WS_USER
 end
 
-execute "Install spotify" do
+execute "Install imageoptim" do
   command "cp -R #{Chef::Config[:file_cache_path]}/ImageOptim.app /Applications"
   user WS_USER
 end
