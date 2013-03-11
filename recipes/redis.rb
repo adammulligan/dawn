@@ -12,7 +12,7 @@ if node["platform"] != "mac_os_x"
     user 'root'
   end
 
-  bash "build node" do
+  bash "build redis" do
     user 'root'
     cwd "#{Chef::Config[:file_cache_path]}/redis-2.6.10"
     code <<-EOH
