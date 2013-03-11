@@ -1,4 +1,4 @@
-include_recipe "pivotal_workstation::homebrew"
+include_recipe "dawn::homebrew"
 
 if node["platform"] != "mac_os_x"
   remote_file "#{Chef::Config[:file_cache_path]}/redis.tar.gz" do
